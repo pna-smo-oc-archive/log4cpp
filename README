@@ -1,2 +1,26 @@
 All 'README' information is now in the HTML documentation,
 see doc/html or the project website (http://log4cpp.sf.net/).
+
+building for qnx using momentics:
+run build project from the menus.
+it should use the qnx recursive style Makefile at the root of this project.
+supported targets: qnxnto on x86 and armv7le
+
+building for other platforms using bjam:
+run bjam like so:
+
+for gcc and mingw:
+bjam toolset=gcc threading=multi variant=debug
+
+for qcc and the default arch (probably x86):
+bjam toolset=qcc threading=multi variant=debug target-os=qnxnto
+
+for qcc and x86
+bjam toolset=qcc threading=multi variant=debug target-os=qnxnto cxxflags="-V,gcc_ntox86" linkflags="-V,gcc_ntox86"
+
+for qcc and armv7le
+bjam toolset=qcc threading=multi variant=debug target-os=qnxnto cxxflags="-V,gcc_ntoarmv7le" linkflags="-V,gcc_ntoarmv7le"
+
+for msvc (should work with vs express):
+bjam toolset=msvc
+
