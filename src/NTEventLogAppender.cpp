@@ -12,8 +12,8 @@ namespace log4cpp {
 
     NTEventLogAppender::NTEventLogAppender(const std::string& name, const std::string& sourceName) :
     AppenderSkeleton(name),
-    _strSourceName(sourceName),
-    _hEventSource(NULL)
+    _hEventSource(NULL),
+    _strSourceName(sourceName)
     {
         open();
     }
@@ -109,11 +109,11 @@ namespace log4cpp {
         return hkey;
     }
 
-    void NTEventLogAppender::regSetString(HKEY hkey, TCHAR *name, TCHAR *value) {
+    void NTEventLogAppender::regSetString(HKEY hkey, const TCHAR *name, const TCHAR *value) {
         RegSetValueEx(hkey, name, 0, REG_SZ, (LPBYTE)value, lstrlen(value));
     }
 
-    void NTEventLogAppender::regSetDword(HKEY hkey, TCHAR *name, DWORD value) {
+    void NTEventLogAppender::regSetDword(HKEY hkey, const TCHAR *name, DWORD value) {
         RegSetValueEx(hkey, name, 0, REG_DWORD, (LPBYTE)&value, sizeof(DWORD));
     }
 

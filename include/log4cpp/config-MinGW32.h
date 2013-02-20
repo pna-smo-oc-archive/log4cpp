@@ -16,8 +16,8 @@
 
 /* define if the compiler has int64_t */
 #ifndef LOG4CPP_HAVE_INT64_T
-#define LOG4CPP_HAVE_INT64_T
-#define int64_t __int64
+#define LOG4CPP_HAVE_INT64_T 1
+/*#define int64_t __int64*/
 
 /* define if the compiler has in_addr_t */
 #ifndef LOG4CPP_HAVE_IN_ADDR_T
@@ -75,7 +75,7 @@ typedef u_long in_addr_t;
 
 /* define if the C library has snprintf */
 #ifndef LOG4CPP_HAVE_SNPRINTF
-#define LOG4CPP_HAVE_SNPRINTF 1
+#undef LOG4CPP_HAVE_SNPRINTF
 #endif
 
 //#define LOG4CPP_HAVE_LOCALTIME_R 0

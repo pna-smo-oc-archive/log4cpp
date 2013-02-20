@@ -80,8 +80,8 @@ namespace log4cpp {
         WORD getCategory(Priority::Value priority);
         WORD getType(Priority::Value priority);
         HKEY regGetKey(TCHAR *subkey, DWORD *disposition);
-        void regSetString(HKEY hkey, TCHAR *name, TCHAR *value);
-        void regSetDword(HKEY hkey, TCHAR *name, DWORD value);
+        void regSetString(HKEY hkey, const TCHAR *name, const TCHAR *value);
+        void regSetDword(HKEY hkey, const TCHAR *name, DWORD value);
         void addRegistryInfo(const char *source);
 
         virtual void open();
