@@ -1,6 +1,7 @@
 project log4cpp ;
 
 alias sockets : : <toolset>gcc ;
+alias sockets : : <toolset>qcc ;
 lib sockets : : <name>ws2_32 <toolset>gcc <os>NT ;
 lib sockets : : <name>ws2_32.lib <toolset>msvc ;
 lib sockets : : <name>ws2_32.lib <toolset>borland ;
@@ -8,6 +9,7 @@ lib sockets : : <name>ws2_32.lib <toolset>borland ;
 lib registry : : <name>Advapi32.lib <toolset>msvc ;
 lib registry : : <name>Advapi32.lib <toolset>borland ;
 alias registry : : <toolset>gcc ;
+alias registry : : <toolset>qcc ;
 
 lib log4cpp : [ glob src/*.cpp ]
               sockets

@@ -22,6 +22,8 @@
 #else
 #   if defined(__MINGW32__)
 #       include <log4cpp/config-MinGW32.h>
+#   elif defined(__QNX__)
+#		include <log4cpp/config-qnxnto.h>
 #   else
 #       include <log4cpp/config.h>
 #   endif

@@ -11,6 +11,16 @@
 
 #include <log4cpp/Portability.hh>
 
+#ifdef LOG4CPP_CSTDINT_NOT_IN_GLOBAL
+#include <cstdint>
+using std::int64_t;
+#endif
+
+#ifdef LOG4CPP_CSTDDEF_NOT_IN_GLOBAL
+#include <cstddef>
+using std::size_t;
+#endif
+
 #ifdef LOG4CPP_CSTDLIB_NOT_IN_STD
 #include <cstdlib>
 namespace std {
@@ -32,6 +42,11 @@ namespace std {
         return ::memmove(dest, src, n);
     };
 }
+#endif
+
+#ifdef LOG4CPP_CSTRING_NOT_IN_GLOBAL
+#include <cstring>
+using std::memcpy;
 #endif
 
 #ifdef LOG4CPP_CTIME_NOT_IN_STD
