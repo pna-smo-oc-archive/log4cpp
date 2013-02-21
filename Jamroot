@@ -1,7 +1,7 @@
 project log4cpp ;
 
 alias sockets : : <toolset>gcc ;
-alias sockets : : <toolset>qcc ;
+lib sockets : : <name>socket <toolset>qcc ;
 lib sockets : : <name>ws2_32 <toolset>gcc <os>NT ;
 lib sockets : : <name>ws2_32 <toolset>msvc ;
 lib sockets : : <name>ws2_32.lib <toolset>borland ;
