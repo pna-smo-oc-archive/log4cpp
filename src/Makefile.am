@@ -21,6 +21,7 @@ liblog4cpp_la_SOURCES = \
 	FixedContextCategory.cpp \
 	IdsaAppender.cpp \
 	OstreamAppender.cpp \
+	SyncOstreamAppender.cpp \
 	StringQueueAppender.cpp \
 	SyslogAppender.cpp \
 	RemoteSyslogAppender.cpp \

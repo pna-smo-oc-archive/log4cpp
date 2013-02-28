@@ -18,6 +18,7 @@ liblog4cppinclude_HEADERS =  \
 	RollingFileAppender.hh \
 	IdsaAppender.hh \
 	OstreamAppender.hh \
+	SyncOstreamAppender.hh \
 	StringQueueAppender.hh \
 	SyslogAppender.hh \
 	RemoteSyslogAppender.hh \
